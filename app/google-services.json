@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "774871286455",
+    "firebase_url": "https://pethome-a4113.firebaseio.com",
+    "project_id": "pethome-a4113",
+    "storage_bucket": "pethome-a4113.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:774871286455:android:b76bad0593ffa547398332",
+        "android_client_info": {
+          "package_name": "com.example.pethome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "774871286455-kvsi5utugb16kog600fam4l2ebt02d8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrX_AR05emsI8GRwdaCZKC4rXX191DQr4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "774871286455-kvsi5utugb16kog600fam4l2ebt02d8r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

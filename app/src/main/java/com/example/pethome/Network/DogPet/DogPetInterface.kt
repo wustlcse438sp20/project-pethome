@@ -1,0 +1,13 @@
+package com.example.pethome.Network.DogPet
+
+import com.example.pethome.Data.Animal
+import retrofit2.Response
+import retrofit2.http.GET
+import retrofit2.http.Headers
+import retrofit2.http.Query
+
+interface DogPetInterface {
+    @Headers("Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJUR1Ixd0p6SXlMckZJc0kxNnJJaU5MV1ZjNGMzblo1Vk9JR2xFaXlSU1pmNHI4YTdCOCIsImp0aSI6ImM0MzQ2MTQ0MDJmNjMxMmRkYjAwZDk0YTYzNTBiYjRkNzRmNDNjMGNkMDM1ZDcxYTg1MGI1YTQ5Njg2NjI3NTk0MDAyMmQzMGQ2MGE4ODI1IiwiaWF0IjoxNTg1OTYwMjk2LCJuYmYiOjE1ODU5NjAyOTYsImV4cCI6MTU4NTk2Mzg5Niwic3ViIjoiIiwic2NvcGVzIjpbXX0.Q8wuALUT83H3Ue5tiKBa33pMXgpS4o7U5NU814dENzTvjjhhKQSFT-HHpmwJTzapQ6so0JlNa-mqTlc22_yDzpO9TnCTHXCqbWZELC5up2u4lQoj8Wp9b2KSPkxpWE8RaJFnvG8qEGdTfNHw_iIOM2tBT1ytfIcypVGGz5fMC8PMYD5S2a_RJj5LeD4hMGSO5yTx1fYaJtQzTXtU-M4ntD0YJDnalH_C-tUN7eexBBOigELWBZKVSCfIKsXlrAj-NLTTYJWM_SnTcCouu3n-pUgOWJxlYkv195Nx6HFVjEBe7FyVhiig49pOr4Rqdc-8GDUOs4BBNal4vek05oZCbg")
+    @GET("v2/animals")
+    suspend fun getAnimalsByType(@Query("type") type: String): Response<Animal>
+}
