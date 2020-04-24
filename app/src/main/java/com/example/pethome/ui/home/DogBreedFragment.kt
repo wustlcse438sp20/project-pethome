@@ -1,10 +1,14 @@
 package com.example.pethome.ui.home
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.EditorInfo
+import android.view.inputmethod.InputMethodManager
+import android.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -20,6 +24,7 @@ class DogBreedFragment : Fragment() {
     private lateinit var viewModel: HomeViewModel
     private var breedList: ArrayList<DogBreedData> = ArrayList()
     private var breedPicList: ArrayList<DogBreedPic> = ArrayList()
+    private var storeSet: HashSet<Int> = HashSet()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +54,9 @@ class DogBreedFragment : Fragment() {
             breedPicList.clear()
             breedList.addAll(datas)
 
+
             viewModel.dogBreedPicList.observe(this, Observer { picDatas ->
+
                 breedPicList.addAll(picDatas)
                 adapter?.notifyDataSetChanged()
             })

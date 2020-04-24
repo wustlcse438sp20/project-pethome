@@ -16,4 +16,8 @@ interface DogDataInterface {
     @Headers("x-api-key: 8ee7386b-e7db-4105-8996-ced23906c011")
     @GET("v1/images/search")
     suspend fun getBreedPic(@Query("breed_id") breed_id: Int): Response<List<DogBreedPic>>
+
+    @Headers("x-api-key: 8ee7386b-e7db-4105-8996-ced23906c011")
+    @GET("v1/breeds/search")
+    suspend fun getBreedsBySearch(@Query("q") breedm: String) : Response<List<DogBreedData>>
 }

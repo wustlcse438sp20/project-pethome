@@ -1,6 +1,7 @@
 package com.example.pethome.ui.profile
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,10 +20,11 @@ class UserFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        Log.e("User", "User has been called")
 
-        val bundle = getArguments()
-        val username = bundle!!.get("username").toString()
+//        val bundle = getArguments()
+//        val username = bundle!!.get("username").toString()
 
-        user_name.text = "Hello " + username
+        user_name.text = "Hello "
     }
 }

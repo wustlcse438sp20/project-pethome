@@ -21,4 +21,8 @@ class HomeViewModel (application: Application): AndroidViewModel(application) {
     fun getBreedPic(breed_id: Int) {
         dogDataRepository.getBreedPic(dogBreedPicList, breed_id)
     }
+
+    fun getBreedsBySearch(breed: String) {
+        dogDataRepository.getBreedsBySearch(dogBreedDataList, breed)
+    }
 }

@@ -55,4 +55,26 @@ class DogDataRepository {
             }
         }
     }
+
+    fun getBreedsBySearch(resBody: MutableLiveData<List<DogBreedData>>, breed: String) {
+        CoroutineScope(Dispatchers.IO).launch {
+            val response = service.getBreedsBySearch(breed)
+
+            withContext(Dispatchers.Main) {
+                try {
+                    if (response.isSuccessful){
+                        resBody.value = response.body()
+                    } else {
+                        println("HTTP error")
+                    }
+                } catch (e: HttpException) {
+                    //http exception
+                    println("HTTP Exception")
+                } catch (e: Throwable) {
+                    //error
+                    println("Error")
+                }
+            }
+        }
+    }
 }
